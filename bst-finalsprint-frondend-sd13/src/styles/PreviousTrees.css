@@ -1,0 +1,89 @@
+.page-title {
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.page-title h1 {
+  font-size: 36px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.trees-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;;
+}
+
+.tree-card {
+  background-color: #3e5066d8;
+  padding: 0px 16px;
+  border-radius: 18px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.596);
+  text-align: center;
+
+}
+
+
+
+.tree-card strong {
+  color: white;
+  font-size: 26px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.tree-cardinput{
+  color: #6ae6ac;
+  font-size: 26px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.json-display {
+  background-color: #1f2937;
+  padding: 30px;
+  border-radius: 14px;
+  font-family: monospace; /* Looks better for text*/
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #70b193; /* Looks more like classic code color (Almost matrix style) */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+  white-space: pre-wrap; /* shapes it in the format I like */
+  border: 1px solid #4b5563;
+}
+
+
+.loading-text{
+      grid-column: 1 / -1;
+  text-align: center;
+  margin: 60px 0;
+    color: rgb(106, 221, 125);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(65, 112, 71, 0.829);
+    background: linear-gradient(to bottom right, #4d586b,#374151,#374151);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.452);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.empty-text {
+
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 60px 0;
+    color: rgb(252, 142, 142);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(247, 24, 24, 0.829);
+    background: linear-gradient(to bottom right, #4d586b,#374151,#374151);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.452);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}

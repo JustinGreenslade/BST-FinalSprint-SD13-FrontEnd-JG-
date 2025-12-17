@@ -1,0 +1,73 @@
+.form-card {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #374151;
+  background: linear-gradient(to bottom right, #161f2bd8,#303947);
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.596);
+  text-align: center;
+}
+
+.form-card h1 {
+  font-size: 36px;
+text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
+
+.input-box {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  border: 1px solid #4b5563;
+  border-radius: 12px;
+  background-color: #7c8491;
+  color: rgb(15, 6, 6);
+  margin-bottom: 16px;
+  outline: none;
+    text-shadow: 2px 2px 2px rgba(165, 143, 143, 0.5);
+}
+
+.input-box::placeholder {
+  color: #1d2430;
+  font-size: 20px;
+    text-shadow: 2px 2px 2px rgba(121, 106, 106, 0.623);
+}
+
+.input-box:focus {
+  border-color: rgba(0, 0, 0, 0.938);
+  box-shadow: 0 0 0 5px rgba(179, 199, 89, 0.3);
+}
+
+.submit-btn {
+  padding: 15px 40px;
+  font-size: 18px;
+  background: linear-gradient(to bottom right, rgba(20, 119, 50, 0.5),rgba(9, 83, 34, 0.514), rgba(150, 253, 150, 0.459));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+  
+}
+
+.submit-btn:hover {
+  background-color: rgb(33, 51, 165);
+}
+
+.result {
+  width: 100%;
+}
+
+.result h2 {
+  font-size: 30px;
+  text-shadow: 2px 2px 2px rgb(18, 29, 20);
+
+}
+
+.json-display {
+  text-align: left;
+}

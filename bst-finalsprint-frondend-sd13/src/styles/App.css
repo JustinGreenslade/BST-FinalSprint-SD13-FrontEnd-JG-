@@ -1,0 +1,34 @@
+body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1f2937;
+  background: linear-gradient(to bottom right, #1f2937, #253142, #1f2937);
+}
+
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1, h2 {
+  color: white;
+  text-align: center;
+}
+
+.error {
+  color: rgb(252, 142, 142);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(247, 24, 24, 0.829);
+    background: linear-gradient(to bottom right, #4d586b,#374151,#374151);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.452);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.938);
+}
