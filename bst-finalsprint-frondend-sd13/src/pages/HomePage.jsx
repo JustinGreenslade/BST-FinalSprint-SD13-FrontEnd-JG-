@@ -10,23 +10,24 @@ export default function HomePage() {
   const [input, setInput] = useState('');
   const [tree, setTree] = useState(null);
   const [error, setError] = useState('');
+  const [balanced, setBalanced] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setTree(null);
 
-    // Simple parsing – good enough, no extra trim/filter stuff
     const numbers = input.split(',').map(num => parseInt(num));
 
-    // Basic check
     if (numbers.length === 0 || numbers.some(isNaN)) {
       setError('Please enter numbers separated by commas');
       return;
     }
 
     try {
-      const response = await axios.post(`${API_URL}/process-numbers`, numbers);
+      const url = `${API_URL}/process-numbers${balanced ? '?balanced=true' : ''}`;
+      
+      const response = await axios.post(url, numbers);
       setTree(response.data);
     } catch (err) {
       setError('Something went wrong, is the backend running?');
@@ -44,9 +45,21 @@ export default function HomePage() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="e.g. 2, 1, 4, 3, 5"
+              placeholder="eg 2, 1, 4, 3, 5"
               className="input-box"
             />
+
+            <div className="checkbox-wrapper">
+              <label className="checkbox-label">
+                <input
+                  type="checkbox"
+                  checked={balanced}
+                  onChange={(e) => setBalanced(e.target.checked)}
+                />
+                <span>Build Balanced Tree</span>
+              </label>
+            </div>
+
             <button type="submit" className="submit-btn">Build Tree</button>
           </form>
 
@@ -55,6 +68,13 @@ export default function HomePage() {
           {tree && (
             <div className="result">
               <h2>Resulting Tree Structure</h2>
+              
+              {tree.type && (
+                <p className="tree-type-info">
+                  This is a {tree.type === 'balanced' ? 'Balanced' : 'Sequential'} BST
+                </p>
+              )}
+
               <pre className="json-display">
                 {JSON.stringify(tree, null, 2)}
               </pre>
